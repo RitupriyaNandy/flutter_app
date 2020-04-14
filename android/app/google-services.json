@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1078735742141",
+    "firebase_url": "https://messaging-34d03.firebaseio.com",
+    "project_id": "messaging-34d03",
+    "storage_bucket": "messaging-34d03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078735742141:android:7afcdb7a54a638f3dd83d4",
+        "android_client_info": {
+          "package_name": "appbrewery.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078735742141-bfam0u2pvl69hjp1ol1v5ahbvgpusj5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBicSYl6_eSWdh0dAcN5W9B8wqtWid7Z84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078735742141-bfam0u2pvl69hjp1ol1v5ahbvgpusj5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
