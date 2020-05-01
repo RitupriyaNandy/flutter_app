@@ -13,6 +13,7 @@ exports.messageTrigger = functions.firestore.document('Carinfo/{carinfoTd}').onC
     }
     var tokens= [];
     newData = snapshot.data();
+    querySnapshot.docs.length
     
     const x= newData.position.latitude
     const y= newData.position.longitude
@@ -21,11 +22,19 @@ exports.messageTrigger = functions.firestore.document('Carinfo/{carinfoTd}').onC
     const b= y+5
     const c= y-5
     var collectionReference = db.collection('rescuers');
-    var query = collectionReference.where(('postion[latitude]', '<=', z)|('postion[longitude]', '<=', b)|('postion[latitude]', '<=',a )|('postion[latitude]', '<=', c))
+    var query = collectionReference.where(('position[latitude]', '<=', z)|('position[longitude]', '<=', b)|('position[latitude]', '>=',a )|('position[latitude]', '>=', c))
     query.get().then(function(querySnapshot) {
-        if (querySnapshot.empty) {
+        if (querySnapshot.docs.empty) {
             console.log('no documents found');
           } else {
+              querySnapshot.docs.forEach(function(doc) {
+                  tokens.push(doc.data().device_token)
+                  
+                  
+              }).catch(function(error) {
+                  console.log("error getting document" , error);
+              });
+
             
           }
       });
